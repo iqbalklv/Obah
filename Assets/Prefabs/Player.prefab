@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1545121198}
   - component: {fileID: 1545121197}
   - component: {fileID: -8789902451105008879}
+  - component: {fileID: 3405310901015649249}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 59e2d390db03d044ea0e859120a678b1, type: 3}
+  m_Sprite: {fileID: -4261726172520906847, guid: 3d717c4116c772e49bb2339413903ccf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +99,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDirection: {fileID: 11400000, guid: ec218855a00852448995c3182c859358, type: 2}
+  CurrentScore: {fileID: 11400000, guid: 65bbd795a381b0a4d9693c71a5393124, type: 2}
+  LevelMaxScore: {fileID: 11400000, guid: e2e0c159cbf00564e832631d0ce5d05b, type: 2}
   PathList: {fileID: 11400000, guid: ce8be0b2cf63f204f94a1a7094dbd6b9, type: 2}
+  PlayerDeath: {fileID: 11400000, guid: 081caa4c70208564286a51ca7728402c, type: 2}
+  PlayerWin: {fileID: 11400000, guid: 3d85e45ab96f76c48b734e5b291e6605, type: 2}
+  ScoreGained: {fileID: 11400000, guid: a900053e6e0bc2b4496849ed74ab694c, type: 2}
 --- !u!114 &1545121197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +152,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1545121198}
         m_TargetAssemblyTypeName: System_Player, Assembly-CSharp
         m_MethodName: CheckPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3405310901015649249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107146041894010038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3820742caaf19494eb1c6fe2b6e56978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenedEvent: {fileID: 11400000, guid: ba2bb2f149492bb4482c46318a5f25ae, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1545121198}
+        m_TargetAssemblyTypeName: System_Player, Assembly-CSharp
+        m_MethodName: Die
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

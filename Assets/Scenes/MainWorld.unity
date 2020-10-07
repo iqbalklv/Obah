@@ -856,7 +856,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3107146041894010038, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
   m_PrefabInstance: {fileID: 3107146040348954906}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1545121197
+--- !u!95 &1545121203
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545121196}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c46176730b60a634f8b8f7164c690455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1545121204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -865,36 +884,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1545121196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3820742caaf19494eb1c6fe2b6e56978, type: 3}
+  m_Script: {fileID: 11500000, guid: 464096ef01900b24d9f0e9578ea7a3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenedEvent: {fileID: 11400000, guid: ba2bb2f149492bb4482c46318a5f25ae, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1545121198}
-        m_TargetAssemblyTypeName: System_Player, Assembly-CSharp
-        m_MethodName: Die
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1545121198 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1545121198, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
-  m_PrefabInstance: {fileID: 3107146040348954906}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545121196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13de70a34b24ddf41a5c7eb75ff29faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  animator: {fileID: 1545121203}
 --- !u!1 &1633164728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6315991994462907338, guid: eb756762b7127d8469c5975e572a0b08, type: 3}
@@ -1184,26 +1177,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1545121198, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
-      propertyPath: CurrentScore
-      value: 
-      objectReference: {fileID: 11400000, guid: 65bbd795a381b0a4d9693c71a5393124, type: 2}
-    - target: {fileID: 1545121198, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
-      propertyPath: LevelMaxScore
-      value: 
-      objectReference: {fileID: 11400000, guid: e2e0c159cbf00564e832631d0ce5d05b, type: 2}
-    - target: {fileID: 1545121198, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
-      propertyPath: PlayerDeath
-      value: 
-      objectReference: {fileID: 11400000, guid: 081caa4c70208564286a51ca7728402c, type: 2}
-    - target: {fileID: 1545121198, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
-      propertyPath: PlayerWin
-      value: 
-      objectReference: {fileID: 11400000, guid: 3d85e45ab96f76c48b734e5b291e6605, type: 2}
-    - target: {fileID: 1545121198, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
-      propertyPath: ScoreGained
-      value: 
-      objectReference: {fileID: 11400000, guid: a900053e6e0bc2b4496849ed74ab694c, type: 2}
     - target: {fileID: 3107146041894010036, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1251,10 +1224,6 @@ PrefabInstance:
     - target: {fileID: 3107146041894010038, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3107146041894010038, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3587b0facec9c3148956dc6729a32487, type: 3}
