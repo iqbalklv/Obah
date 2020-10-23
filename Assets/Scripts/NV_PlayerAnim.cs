@@ -9,9 +9,9 @@ public class NV_PlayerAnim : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetFloat("Speed", Mathf.Abs(1f));
+            animator.SetFloat("Speed", 1f);
         }
         else
-            animator.SetFloat("Speed", Mathf.Abs(0f));
+            animator.SetFloat("Speed", 0f);
     }
 }

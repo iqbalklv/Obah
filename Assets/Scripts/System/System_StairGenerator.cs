@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +20,7 @@ public class System_StairGenerator : MonoBehaviour
             currentStair = Instantiate(StairPrefab, StairPoint.Value, Quaternion.identity);
             currentStair.transform.SetParent(this.transform);
         }
+       
     }
 
     private void NextStairPoint()
@@ -47,4 +48,5 @@ public class System_StairGenerator : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    
 }

@@ -8,6 +8,7 @@ public class NV_BGMove : MonoBehaviour
 {
     public float Speed;
     Vector2 StartPos;
+    public FloatVariable LevelDelay; 
 
     private  void Start()
     {
@@ -17,8 +18,12 @@ public class NV_BGMove : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
-            transform.Translate((new Vector2(0,-1))*Speed*Time.deltaTime);
+        if (LevelDelay.Value <= 0) {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                transform.Translate((new Vector2(0, -1)) * Speed * Time.deltaTime);
+            }
         }
+        
     }
 }
