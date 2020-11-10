@@ -11,60 +11,6 @@ TextureImporter:
   - first:
       213: 2750723391585769582
     second: AWAN_TIPE_1-Sheet_2
-  - first:
-      213: -3061398456249481766
-    second: AWAN_TIPE_1-Sheet_0
-  - first:
-      213: -6198602564151947542
-    second: AWAN_TIPE_1-Sheet_1
-  - first:
-      213: 7555555041769947383
-    second: AWAN_TIPE_1-Sheet_2
-  - first:
-      213: -5684477817095242402
-    second: AWAN_TIPE_1-Sheet_3
-  - first:
-      213: -6408418568224806168
-    second: AWAN_TIPE_1-Sheet_4
-  - first:
-      213: 8350963514831657095
-    second: AWAN_TIPE_1-Sheet_5
-  - first:
-      213: 8570535146625113600
-    second: AWAN_TIPE_1-Sheet_6
-  - first:
-      213: 3104392570879712936
-    second: AWAN_TIPE_1-Sheet_7
-  - first:
-      213: 381682280619755782
-    second: AWAN_TIPE_1-Sheet_8
-  - first:
-      213: 8810722655309247978
-    second: AWAN_TIPE_1-Sheet_9
-  - first:
-      213: -8735163104697412534
-    second: AWAN_TIPE_1-Sheet_10
-  - first:
-      213: -6219541484525640729
-    second: AWAN_TIPE_1-Sheet_11
-  - first:
-      213: 3676589965229553280
-    second: AWAN_TIPE_1-Sheet_12
-  - first:
-      213: 1123714290281576120
-    second: AWAN_TIPE_1-Sheet_13
-  - first:
-      213: -1306538947259267760
-    second: AWAN_TIPE_1-Sheet_14
-  - first:
-      213: -8629187695382782481
-    second: AWAN_TIPE_1-Sheet_15
-  - first:
-      213: -8425117971451783307
-    second: AWAN_TIPE_1-Sheet_16
-  - first:
-      213: -8854833847050923055
-    second: AWAN_TIPE_1-Sheet_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -160,7 +106,7 @@ TextureImporter:
         width: 112
         height: 66
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +127,7 @@ TextureImporter:
         width: 112
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,7 +148,7 @@ TextureImporter:
         width: 112
         height: 66
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
