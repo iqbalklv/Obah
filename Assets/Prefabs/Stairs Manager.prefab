@@ -49,6 +49,7 @@ MonoBehaviour:
   StairCount: {fileID: 11400000, guid: 67bf19d9e41b506478eed15b5c67e5d3, type: 2}
   StairSet: {fileID: 2589522384559010399, guid: 5b18178000c82644f8d9e2bd2893468d, type: 3}
   PlayerDirection: {fileID: 11400000, guid: ec218855a00852448995c3182c859358, type: 2}
+  PathList: {fileID: 11400000, guid: ce8be0b2cf63f204f94a1a7094dbd6b9, type: 2}
 --- !u!114 &2740393221034856565
 MonoBehaviour:
   m_ObjectHideFlags: 0

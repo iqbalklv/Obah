@@ -5,14 +5,10 @@ using UnityEngine;
 
 public class DeathMenu : MonoBehaviour
 {
-    void Update()
-    {
-        
-    }
+
     public void Restart()
     {
         FindObjectOfType<Manager_Level>().Lose();
     }
    
-    
 }
