@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b757c6f09e732fe40b7af5eec6a73021, type: 3}
-  m_Name: CurrentLevel
+  m_Script: {fileID: 11500000, guid: a656f10c52385cb4da83502801c96731, type: 3}
+  m_Name: Master Container Level
   m_EditorClassIdentifier: 
-  Value: 3
+  levels:
+  - {fileID: 11400000, guid: 586848c88cbc62642a476b1723e4cd7b, type: 2}
+  - {fileID: 11400000, guid: daf8c7b930187f34591abdbb9400d82d, type: 2}
