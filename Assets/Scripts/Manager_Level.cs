@@ -15,10 +15,6 @@ public class Manager_Level : MonoBehaviour
 
     public FloatVariable CurrentLevelDuration;
 
-    public DeathMenu DeathMenuUI;
-
-    
-
     private void Awake()
     {
         LevelDelay.Value = 5f;
@@ -97,8 +93,7 @@ public class Manager_Level : MonoBehaviour
 
     public void Lose()
     {
-        DeathMenuUI.gameObject.SetActive(true);
-       CurrentLevel.Value = 1;
+        CurrentLevel.Value = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         print("Player Lose!");
     }
