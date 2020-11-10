@@ -8,12 +8,15 @@ public class System_Control : MonoBehaviour
     public GameEvent PlayerJump;
     public GameEvent PlayerChangeDirection;
     public IntVariable PlayerDirection;
-
+    public BoolVariable hasWin = default;
     public FloatVariable LevelDelay;
 
     private void Update()
     {
-        PlayerMove();     
+        if(hasWin.Value == false)
+        {
+            PlayerMove();
+        }
     }
         
         public void PlayerMove()

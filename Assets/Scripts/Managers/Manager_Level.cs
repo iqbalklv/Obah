@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Manager_Level : MonoBehaviour
 {
+    [SerializeField] Container_Level levelList = default;
+
+
     public IntVariable CurrentLevel;
     public FloatVariable LevelDelay;
     public FloatVariable LevelDurationAddition;
@@ -15,9 +18,12 @@ public class Manager_Level : MonoBehaviour
 
     public FloatVariable CurrentLevelDuration;
 
+    public AnimationClip Player_Win = default;
+
     private void Awake()
     {
-        LevelDelay.Value = 5f;
+        LevelDelay.Value = 3f;
+        hasWin.Value = false;
     }
 
     private void Start()
@@ -30,7 +36,7 @@ public class Manager_Level : MonoBehaviour
     {
         if (LevelDelay.Value <= 0)
         {
-            if (!hasWin)
+            if (!hasWin.Value)
             {
                 CurrentLevelDuration.Value -= Time.deltaTime;
 
@@ -48,7 +54,7 @@ public class Manager_Level : MonoBehaviour
 
     public void SetLevelDuration()
     {
-        CurrentLevelDuration.Value = 30f;
+        CurrentLevelDuration.Value = 20f;
 
         if (CurrentLevel.Value < 1)
         {
@@ -64,38 +70,50 @@ public class Manager_Level : MonoBehaviour
             LevelDurationAddition.Value = CurrentLevel.Value * 1.5f;
         }
 
-        CurrentLevelDuration.Value -= LevelDurationAddition.Value;
+        CurrentLevelDuration.Value += LevelDurationAddition.Value;
     }
+
+
+    private int LevelMaxScore_Level1 = 20;
 
     private void SetLevelMaxScore()
     {
         if (CurrentLevel.Value == 1)
         {
-            LevelMaxScore.Value = 10;
+            LevelMaxScore.Value = LevelMaxScore_Level1;
         }
         else
         {
-            LevelMaxScore.Value = 10 + (int)(CurrentLevel.Value * 2.5f);
+            LevelMaxScore.Value = LevelMaxScore_Level1 + (int)(CurrentLevel.Value * 2.5f);
         }
     }
 
-    private bool hasWin = false;
+    [SerializeField] private BoolVariable hasWin = default;
 
     public void Win()
     {
-        hasWin = true;
+        hasWin.Value = true;
 
         CurrentLevel.Value++;
-        print("Player Win!");
 
+        Invoke("NextLevel", Player_Win != null ? Player_Win.length + .5f : 0f);
+    }
+
+    private void NextLevel()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Lose()
     {
-        CurrentLevel.Value = 1;
+        ResetVariables();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        print("Player Lose!");
     }
 
+    public void ResetVariables()
+    {
+        Time.timeScale = 1f;
+        CurrentLevel.Value = 1;
+        levelList.Reset();
+    }
 }

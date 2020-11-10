@@ -11,7 +11,8 @@ public class UI_ScoreText : MonoBehaviour
 
     private void Start()
     {
-        UpdateScore();
+        tmp.text = "";
+        Invoke("UpdateScore", .5f);
     }
 
     public void UpdateScore()
